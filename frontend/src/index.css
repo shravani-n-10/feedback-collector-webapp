@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-100 font-sans antialiased;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg;
+}
