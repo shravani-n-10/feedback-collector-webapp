@@ -25,7 +25,7 @@ const FeedbackForm = ({ onFeedbackAdded }) => {
         if (image) formData.append('image', image);
 
         try {
-            await axios.post('http://localhost:5000/api/feedback', formData, {
+            await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/feedback`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${userInfo.token}`

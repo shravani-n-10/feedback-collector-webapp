@@ -21,7 +21,7 @@ const Dashboard = () => {
 
         fetchStats();
 
-        const socket = io('http://localhost:5000');
+        const socket = io(import.meta.env.VITE_API_URL || 'http://localhost:5000');
         
         socket.on('new_feedback', () => {
             fetchStats();
@@ -33,7 +33,7 @@ const Dashboard = () => {
 
     const fetchStats = async () => {
         try {
-            const { data } = await axios.get('http://localhost:5000/api/feedback/stats');
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/feedback/stats`);
             setStats(data);
         } catch (error) {
             console.error(error);

@@ -25,7 +25,7 @@ const Search = () => {
 
         fetchFeedbacks();
 
-        const socket = io('http://localhost:5000');
+        const socket = io(import.meta.env.VITE_API_URL || 'http://localhost:5000');
         
         socket.on('new_feedback', (newFeedback) => {
             setFeedbacks(prev => {
@@ -42,7 +42,7 @@ const Search = () => {
 
     const fetchFeedbacks = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/feedback?search=${search}&rating=${rating}&sort=${sort}`);
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/feedback?search=${search}&rating=${rating}&sort=${sort}`);
             setFeedbacks(data);
         } catch (error) {
             console.error(error);
