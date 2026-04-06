@@ -2,6 +2,8 @@
 
 A full-stack MERN (MongoDB, Express, React, Node.js) web application designed to securely collect, manage, and analyze user feedback in real time using advanced sentiment analysis.
 
+🌟 **Live Demo:** [Click Here to View the App](https://feedback-collector-webapp.vercel.app)
+
 ## 📌 Key Features
 
 * **Real-time Synchronization**: Powered by `Socket.io`, new feedback instantly populates the dashboard for all connected devices without needing a page refresh.
