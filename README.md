@@ -2,8 +2,6 @@
 
 A full-stack MERN (MongoDB, Express, React, Node.js) web application designed to securely collect, manage, and analyze user feedback in real time using advanced sentiment analysis.
 
-![Demo Mockup](https://via.placeholder.com/800x400.png?text=Smart+Feedback+Analyzer)
-
 ## 📌 Key Features
 
 * **Real-time Synchronization**: Powered by `Socket.io`, new feedback instantly populates the dashboard for all connected devices without needing a page refresh.
